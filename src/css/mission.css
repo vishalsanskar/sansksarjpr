@@ -1,0 +1,10 @@
+.mission-main {
+    padding: 0px 280px;
+    display: flex;
+}
+.mission-main .left-side {
+    width: 50%;
+}
+.mission-main .right-side {
+    width: 50%;
+}

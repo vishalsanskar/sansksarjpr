@@ -1,0 +1,95 @@
+
+.page-heading {
+    text-align: center;
+}
+
+.page-heading h1 {
+    /* margin: auto; */
+    /* width: 100%; */
+    text-align: center;
+    font-size: 46px;
+    color: #1780e9;
+    /* padding: 50px 0px; */
+    padding-top: 100px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.visionary-leaders-main {
+    padding: 60px 100px;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.visionary-leaders {
+    width: 46%;
+    display: flex;
+    padding: 30px;
+    box-sizing: border-box;
+    background: #1780e936;
+    margin: 16px;
+    border-radius: 10px;
+}
+.visionary-img-box {
+    width: 30%;
+    height: 210px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.visionary-content {
+    width: 80%;
+    margin-left: 20px;
+}
+.visionary-img-box img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.visionary-content h5 {
+    font-size: 26px;
+    /* color: #0066cc; */
+    font-weight: 500;
+    /* padding-bottom: 10px; */
+    padding: 10px 0px;
+    color: #193B94;
+}
+.visionary-content p {
+    font-size: 16px;
+    line-height: 25px;
+    color: #333;
+}
+
+.mission-main .left-side .content-box p {
+    font-size: 18px;
+    color: #1780e9;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+.mission-main .content-box {
+    padding-top: 80px;
+}
+.mission-main .left-side .content-box ul li p {
+    font-size: 18px;
+    color: #333;
+    font-weight: 500;
+    line-height: 30px;
+}
+.mission-main .content-box ul {
+    padding-top: 30px;
+}
+.mission-main .content-box ul li {
+    margin-bottom: 20px;
+}
+.mission-main .right-side {
+    width: 50%;
+}
+.mission-main .right-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+

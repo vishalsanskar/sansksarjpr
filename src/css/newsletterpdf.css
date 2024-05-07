@@ -1,0 +1,18 @@
+
+.pdf-viewer#viewer {
+    position: relative !important;
+}
+
+.viewer-toolbar {
+    z-index: 1;
+    bottom: 0px !important;
+    position: absolute !important;
+    width: 88% !important;
+}
+
+.viewer-pdf-sidenav, .viewer-toolbar {
+    --pdf-toolbar-text-color: rgb(241, 241, 241);
+    position: absolute !important;
+    bottom: 0px !important;
+    width: 96% !important;
+}

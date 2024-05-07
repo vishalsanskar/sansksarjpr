@@ -1,0 +1,78 @@
+.inspiration-mian {
+    padding: 0px 280px;
+}
+.ourinspiration {
+    width: 85%;
+    background: #1780e936;
+    padding: 60px;
+    margin: auto;
+    border-radius: 30px;
+    margin-bottom: 50px;
+}
+.ourinspiration-img-box {
+
+    display: flex;
+ 
+    justify-content: space-between;
+
+}
+
+.ourinspiration-img-box .left-side, .ourinspiration-img-box .right-side {
+    width: 48%;
+    height: auto;
+    background: #fff;
+    padding: 0px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.inspiration-mian h1 {
+    font-size: 46px;
+    color: #1780e9;
+    font-weight: 500;
+    text-align: center;
+    /* padding: 60px; */
+    margin-bottom: 35px;
+    padding-top: 55px;
+}
+
+ 
+.ourinspiration-img-box .left-side .innerbox, .ourinspiration-img-box .right-side .innerbox {
+    width: 100%;
+    height: 100%;
+}
+.ourinspiration-img-box .left-side .innerbox .imgbox-ourter, .ourinspiration-img-box .right-side .innerbox .imgbox-ourter {
+    width: 100%;
+    height: 930px;
+}
+
+.ourinspiration-img-box .left-side .innerbox .imgbox-ourter img, .ourinspiration-img-box .right-side .innerbox .imgbox-ourter img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ourinspiration-img-box .content-box {
+    padding: 15px;
+    text-align: center;
+}
+.ourinspiration-img-box .content-box h4 {
+    font-size: 32px;
+    color: #193B94;
+    font-weight: 500;
+    line-height: 45px;
+}
+.ourinspiration-img-box .content-box p {
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+    line-height: 36px;
+}
+
+.ourinspiration p.bottomline {
+    margin-top: 30px;
+    padding: 0px 190px;
+    font-size: 30px;
+    line-height: 46px;
+    color: #193B94;
+}

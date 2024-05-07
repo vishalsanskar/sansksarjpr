@@ -1,38 +1,530 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+header {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.07), 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  color: #212529;
+}
+
+.nav-area {
+  display: flex;
+  align-items: center;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  padding: 10px 90px;
+  background: #1780e9;
+  /* justify-content: center; */
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 25px;
+  color: inherit;
+  margin-right: 20px;
+}
+
+/* menu on desktop */
+.desktop-nav .menus {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.desktop-nav .menu-items {
+  position: relative;
+  font-size: 14px;
+}
+
+.desktop-nav .menu-items a {
+  display: block;
+  font-size: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
+.desktop-nav .menu-items button {
+  display: flex;
+  align-items: center;
+  color: inherit;
+  font-size: inherit;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  width: 100%;
+}
+
+.desktop-nav button span {
+  margin-left: 3px;
+}
+
+.desktop-nav .menu-items > a,
+.desktop-nav .menu-items button {
+  text-align: left;
+  padding: 0.7rem .80rem;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+/* 
+.desktop-nav .menu-items a:hover,
+.desktop-nav .menu-items button:hover {
+  background-color: #f2f2f2;
+} */
+
+.desktop-nav .arrow::after {
+  content: "";
+  display: inline-block;
+  margin-left: 0.28em;
+  vertical-align: 0.09em;
+  border-top: 0.42em solid;
+  border-right: 0.32em solid transparent;
+  border-left: 0.32em solid transparent;
+}
+
+.desktop-nav .dropdown {
+  position: absolute;
+  right: 0;
+  left: auto;
+  box-shadow: 0 10px 15px -3px rgba(46, 41, 51, 0.08),
+    0 4px 6px -2px rgba(71, 63, 79, 0.16);
+  font-size: 0.875rem;
+  z-index: 9999;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  list-style: none;
+  /* background-color: #fff; */
+  background-color: #0066cc;
+  border-radius: 0.5rem;
+  display: none;
+}
+
+.desktop-nav .dropdown.show {
+  display: block;
+}
+
+.desktop-nav .dropdown .dropdown-submenu {
+  position: absolute;
+  left: 100%;
+  top: -7px;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+/* menu css */
+.desktop-nav .dropdown.show {
+  display: block;
+  top: 30px;
+}
+
+ul.dropdown.dropdown-submenu.show {
+  top: 0px;
+}
+
+ul.dropdown.show li:hover {
+  background: #fdc426;
+}
+
+
+
+
+/* menu on mobile */
+@media screen and (max-width: 960px) {
+  .nav-area {
+    justify-content: space-between;
+  }
+
+  .desktop-nav {
+    display: none;
+    text-align: right;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+  .mobile-nav .mobile-nav__menu-button {
+    color: inherit;
+    font-size: inherit;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+  }
+  .mobile-nav .menus {
+    list-style: none;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    box-shadow: 0 10px 15px -3px rgba(46, 41, 51, 0.08),
+      0 4px 6px -2px rgba(71, 63, 79, 0.16);
+    z-index: 9999;
+    min-width: 12rem;
+    padding: 0.5rem 0;
+    background-color: #fff;
+    border-radius: 0.5rem;
+  }
+
+  .mobile-nav .menu-items a {
+    display: block;
+    font-size: inherit;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .mobile-nav .menu-items button {
+    display: flex;
+    align-items: center;
+    color: inherit;
+    font-size: inherit;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  .mobile-nav .menu-items > a,
+  .mobile-nav .menu-items button {
+    text-align: left;
+    padding: 0.7rem 1rem;
+  }
+
+  .mobile-nav .menu-items a:hover,
+  .mobile-nav .menu-items button:hover {
+    background-color: #f2f2f2;
+  }
+
+  .mobile-nav .arrow::after {
+    content: "";
+    display: inline-block;
+    margin-left: 1.2em;
+    vertical-align: 0.09em;
+    border-top: 0.42em solid;
+    border-right: 0.32em solid transparent;
+    border-left: 0.32em solid transparent;
+  }
+  .mobile-nav .arrow-close::after {
+    content: "";
+    display: inline-block;
+    margin-left: 1.2em;
+    vertical-align: 0.09em;
+    border-bottom: 0.42em solid;
+    border-right: 0.32em solid transparent;
+    border-left: 0.32em solid transparent;
+  }
+
+  .mobile-nav .dropdown {
+    margin-left: 1.2em;
+    font-size: 0.9rem;
+    padding: 0.5rem 0;
+    list-style: none;
+    display: none;
+  }
+
+  .mobile-nav .dropdown.show {
+    display: block;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* page content */
+.section-spacing {
+  padding: 60px 0px;
+}
+.content {
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  padding: 3rem 20px;
+}
+.main-content-box {
+  padding: 0px 60px;
+}
+.content h1 {
+  font-size: 2rem;
+}
+
+.tielt-head h1 {
+  text-align: center;
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #2d246a;
+}
+
+
+
+
+#error-page {
+  /* center content on the page */
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh;
+  gap: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+
+.igcse-data, .ibdp-data, .ib-syllabus {
+  padding: 0px 90px;
+}
+.horizontal-tabs {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 0px;
+}
+.tab-list {
+  width: 23%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tab-content {
+  width: 75%;
+}
+.tab-list-data {
+  background: #464242;
+  padding: 40px 20px;
+  border-radius: 3px;
+}
+.tab.active {
+  background: #4582ff;
+}
+.tab-list-data .tab {
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+}
+.school-detail-box {
+  background: #1780e936;
+  border-radius: 3px;
+  margin-top: 20px;
+  padding: 40px 20px;
+}
+.school-detail-box h1 {
+  color: #1780e9;
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+.school-detail-box h5 {
+  color: #464242;
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.school-detail-box p {
+  color: #464242;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.school-detail-box ul li {
+  list-style: none;
+  margin-bottom: 10px;
+  color: #464242;
+  font-size: 16px;
+  font-weight: 500;
+}
+.cam-lower-sec h1.title {
+  color: #1780e9;
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  position: relative;
+}
+h5.cam-title-heading {
+  font-size: 19px;
+  color: #000;
+  font-weight: 500;
+  /* margin-bottom: 10px; */
+  line-height: 35px;
+}
+.cam-lower-sec p {
+  font-size: 16px;
+  color: #464242;
+  line-height: 25px;
+  margin-bottom: 14px;
+}
+
+.cam-lower-table table {
+  /* width: 100%; */
+  border-collapse: collapse;
+}
+
+.cam-lower-table th, td {
+  border: solid 1px;
+  text-align: center;
+  padding: 10px 10px;
+}
+.cam-lower-table {
+  margin-bottom: 20px;
+}
+.cam-lower-sec ul {
+  line-height: 25px;
+  padding: 10px 50px;
+}
+.cam-lower-sec p a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+}
+.cam-lower-sec h1.title:before {
+  width: 100px;
+  height: 1px;
+  content: "";
+  position: absolute;
+  bottom: -9px;
+  left: 0px;
+  background: #1780e9;
+ 
+}
+tbody.ibdp-table th {
+  width: 25%;
+}
+tbody.ibdp-table td {
+  text-align: left;
+  padding: 10px;
+}
+.ibdp-pro-row {
+  display: flex;
+  width: 100%;
+}
+.ibdp-pro-row .cam-lower-sec {
+  width: 74%;
+}
+.ibdp-pro-row .ibdp-pro-img {
+  text-align: center;
+  width: 26%;
+  display: flex;
+  align-items: center;
+}
+.ibdp-pro-row .ibdp-pro-img img {
+ width: 100%;
+ height: auto;
+}
+ul.admission-categories li .list-persent span {
+  color: #464242;
+  font-size: 19px;
+  font-weight: 600;
+}
+.cam-lower-sec p {
+  font-size: 16px;
+  color: #464242;
+  line-height: 25px;
+  margin-bottom: 14px;
+  font-weight: 500;
+}
+ul.admission-categories li .list-name {
+  width: 30%;
+  font-size: 16px;
+  font-weight: 600;
+}
+ul.admission-categories li {
+  display: flex;
+}
+ul.admission-categories li .list-persent {
+  width: 18%;
+  display: flex;
+  justify-content: space-around;
+  font-weight: 600;
+}
+.cam-lower-sec ul {
+  padding-left: 19px;
+  line-height: 25px;
+  padding: 16px 50px;
+}
+ol.admission-class {
+  margin-top: 5px;
+  padding-left: 30px;
+}
+ol.admission-class li {
+  line-height: 26px;
+}
+ul.admission-categories li {
+  line-height: 32px;
+}
+ul.admission-xi li {
+  display: flex;
+}
+ul.admission-xi li span {
+  color: #000;
+}
+ul.admission-xi {
+  padding: 9px 51px;
+  font-weight: 600;
+  /* color: #000 !important; */
+}
+ul.admission-xi li p {
+  /* color: #000; */
+  font-weight: 600;
+}
+.ib-policy {
+  padding: 0px 90px;
+}
+.cam-lower-table.policy tbody tr td {
+  vertical-align: top;
+}
+.cam-lower-table.marks tr td {
+  width: 20%;
+}
+
+.handbook-box {
+  /* width: 230px;
+  height: 351px; */
+  margin: 15px;
+  padding: 10px;
+  border: solid 1px #4582ff;
+  border-radius: 4px;
+}
+
+.handbook-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.idbp-handbook-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.handbook-img {
+  width: 345px;
+  height: 314px;
+}
+.handbook-box a {
+  font-size: 20px;
+  text-decoration: none;
+  text-align: center;
+  color: #000;
+  padding: 14px 0px;
+  display: block;
+}
+
+.syllubus-data {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 15px;
+}
+.syllubs-list {
+  padding: 21px 18px;
+  background: #cee4fa;
+  margin: 15px;
+  min-width: 280px;
+  text-align: center;
+  /* color: #0000; */
+  margin-left: 0px;
+}
+.syllubs-list a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+.syllubus-data th.book-width {
+  width: 38%;
 }

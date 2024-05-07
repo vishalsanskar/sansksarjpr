@@ -1,0 +1,111 @@
+.ibdp-main-sec {
+    padding: 60px 100px;
+}
+.ibpyp-agency-model {
+    display: flex;
+    align-items: center;
+}
+
+.ibpyp-agency-model .left-sec {
+    width: 50%;
+}
+.ibpyp-agency-model .right-sec {
+    width: 50%;
+}
+
+.ibpyp-agency-model .right-sec .img-box {
+    width: auto;
+    height: 550px;
+    
+}
+.ibpyp-agency-model .right-sec img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.ibpyp-agency-model .left-sec ul li {
+    margin-bottom: 15px;
+    list-style: none;
+}
+.ibpyp-agency-model .left-sec ul li h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #1780e9;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+}
+.ibpyp-agency-model .left-sec ul li p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+}
+
+.ibpyp-framework-model {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ibpyp-framework-model .left-sec {
+    width: 100%;
+}
+.ibpyp-framework-model .right-sec {
+    width: 100%;
+    text-align: center;
+}
+
+.ibpyp-framework-model .right-sec .img-box {
+    width: auto;
+    height: 550px;
+    
+}
+.ibpyp-framework-model .right-sec img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.ibpyp-framework-model .left-sec ul li {
+    margin-bottom: 15px;
+    list-style: none;
+}
+.ibpyp-framework-model .left-sec ul li h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #1780e9;
+    margin-bottom: px;
+}
+.ibpyp-framework-model .left-sec ul li p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+}
+
+
+
+
+.learners-strive ul li h3 {
+    border: solid 1px;
+    width: 15%;
+    box-sizing: border-box;
+    align-items: center;
+    display: flex;
+}
+
+.learners-strive ul li {
+    display: flex;
+}
+
+.learners-strive ul li h3 {
+    border: solid 1px;
+    width: 15%;
+    box-sizing: border-box;
+    align-items: center;
+    display: flex;
+}
+
+.learners-strive ul li span {
+    color: #000;
+    border: solid 1px;
+    width: 85%;
+}

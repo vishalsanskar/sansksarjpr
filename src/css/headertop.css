@@ -1,0 +1,135 @@
+.header-top-row {
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+    padding: 12px 60px;
+}
+
+svg.MuiSvgIcon-root.header-icons {
+    color: #1780e9;
+    font-size: 20px;
+    padding: 0px;
+    margin: 0px;
+    margin-right: 10px;
+}
+ul.header-contact li {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+ul.header-contact {
+    display: inline-flex;
+}
+ul.header-contact li a {
+    text-decoration: none;
+    color: #2b2b2b;
+    font-weight: 500;
+    font-size: 16px;
+}
+ul.header-socila-icons {
+    justify-content: end;
+    display: flex;
+}
+ul.header-socila-icons li {
+    margin-left: 6px;
+    list-style: none;
+}
+
+
+.top-header-logo {
+    width: auto;
+    height: 70px;
+}
+
+.top-header-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.top-header-social-menu ul li {
+    display: inline-block;
+
+}
+.top-header-social-menu ul li a {
+    text-decoration: none;
+    margin-left: 10px;
+    color: #000;
+
+}
+.program-box {
+    display: flex;
+    width: 58%;
+    justify-content: space-between;
+}
+.img-box {
+    width: auto;
+    height: 40px;
+}
+.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.MuiSvgIcon-root {
+    color: #0066cc;
+}
+
+
+.admission-now {
+    height: 25px;	
+    overflow: hidden;
+    position: relative;
+   }
+   .admission-now h3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 30px;
+    text-align: center;
+    /* Starting position */
+    -moz-transform:translateX(100%);
+    -webkit-transform:translateX(100%);	
+    transform:translateX(100%);
+    /* Apply animation to this element */	
+    -moz-animation: admission-now 10s linear infinite;
+    -webkit-animation: admission-now 10s linear infinite;
+    animation: admission-now 10s linear infinite;
+   }
+   .admission-now h3 a {
+    text-decoration: none;
+    color: #1780e9;
+}
+
+ul.header-contact {
+    display: inline-flex;
+    list-style: none;
+}
+
+   /* Move it (define the animation) */
+   @-moz-keyframes admission-now {
+    0%   { -moz-transform: translateX(100%); }
+    100% { -moz-transform: translateX(-100%); }
+   }
+   @-webkit-keyframes admission-now {
+    0%   { -webkit-transform: translateX(100%); }
+    100% { -webkit-transform: translateX(-100%); }
+   }
+   @keyframes admission-now {
+    0%   { 
+    -moz-transform: translateX(100%); /* Firefox bug fix */
+    -webkit-transform: translateX(100%); /* Firefox bug fix */
+    transform: translateX(100%); 		
+    }
+    100% { 
+    -moz-transform: translateX(-100%); /* Firefox bug fix */
+    -webkit-transform: translateX(-100%); /* Firefox bug fix */
+    transform: translateX(-100%); 
+    }
+   }
+   .admission-now h3:hover {
+    -moz-animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+    }

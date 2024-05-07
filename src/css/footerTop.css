@@ -1,0 +1,19 @@
+.Footer-top {
+    padding: 50px 280px;
+}
+.footop-img {
+    display: flex;
+    justify-content: space-between;
+}
+.footer-img-box {
+    width: auto;
+    height: 60px;
+}
+.footer-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+
